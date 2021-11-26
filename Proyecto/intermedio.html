@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación en C#</title>
+</head>
+<body>
+    <header>
+        <div id="navigation">
+            <ul>
+                <li><a href="">Primeros pasos</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Avanzado</a></li>
+                <li><a href="">Misión y Visión</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="firstcontainer">
+        <section>
+            <h2>Nivel Intermedio</h2>
+            <p>En este nivel aprenderás los conocimientos básicos de las estructuras aplicadas en el lenguaje C#, recuerda el
+                aprendizaje es secuencial, deberás de haber aprendido los temas explicados en el nivel “Primeros Pasos” para
+                continuar. Te deseamos el mejor de los éxitos en tu aprendizaje.</p>
+            
+        </section>
+    </div>
+    <div id="secondcontainer">
+        <h1 align="center">Estructuras Básicas de C# </h1>
+        <section>
+            <h2>Agenda: </h2>
+            <ul>
+                <li><a href="">Tipos de Arreglos</a></li>
+                <li><a href="">Sentencia Condicional if </a></li>
+                <li><a href="">Sentencia Condicional if-else</a></li>
+                <li><a href="">Sentencia Condicional if-else if-else</a></li>
+                <li><a href="">Etructura de repeticion while</a></li>
+                <li><a href="">Etructura de repeticion Dowhile</a></li>
+                <li><a href="">Etructura de repeticion for</a></li>
+                <li><a href="">Etructura de en C#</a></li>
+            </ul>            
+        </section>
+
+        <hr>
+    </div>
+    <div id="thirdcontainer">
+        <section>
+            <h2>aqui intentaremos poner el codigo solo ejemplo primero F</h2>
+            <br>
+        </section>
+        <section>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+             
+                   
+            </code></pre>
+            
+        </section>
+        <hr>
+        <br>
+        <br>
+
+
+    </div>
+    <footer>
+        TPI115-2021 FIA-UES Grupo 01
+    </footer>
+
+    <!--script para copiar el código-->
+    <script type='text/javascript'>
+        function copiarAlPortapapeles(id_elemento) {
+             var aux = document.createElement("input");
+            aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+                }
+    </script>
+    <!--fin del script-->        
+</body>
+</html>
