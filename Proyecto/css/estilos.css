@@ -1,5 +1,5 @@
 @charset "UTF8"
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -172,3 +172,27 @@ pre.code-csharp4 code {
      margin-left: 5%;
      margin-right: 5%
  }
+/* CSS para link a videos */
+
+ .video:link{
+   /* background-image: url('../images/iconyoutube.png');*/
+    background: url('../images/iconyoutube.png') no-repeat;
+    height: auto;
+    width: auto;
+    position: absolute
+}
+.video:visited{
+    color: black;  
+    font-family: arial; 
+    text-decoration: none 
+
+}
+.video:hover{
+    color: black; 
+    font-family: arial; 
+    text-decoration: none;
+}
+.textovideo{
+    margin-left: 20px;
+    text-decoration: none;
+}
