@@ -196,3 +196,26 @@ pre.code-csharp4 code {
     margin-left: 20px;
     text-decoration: none;
 }
+
+/*CSS para navegacion niveles de aprendizaje*/
+#secondcontainer .inicioN, .tema {
+    list-style:none;
+}
+
+.tema {
+    float:center;
+    
+}
+
+.tema a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.tema  a:hover {
+    background-color:#434343;
+}
+
