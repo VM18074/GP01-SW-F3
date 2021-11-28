@@ -87,6 +87,14 @@
                         <li class="subtema"><a href="#tema8.4">Operadores lógicos de C#</a></li>
                     </ul>
                 </li>
+                <li class="tema"><a href="#tema9">Entradas de usuario de C#</a>
+                    <ul class="subtemaI">
+                        <li class="subtema"><a href="#tema9.1">Obtener información del usuario</a></li>
+                        <li class="subtema"><a href="#tema9.2">Entrada de usuario y números</a></li>
+                    </ul>
+                </li>
+
+                <li class="tema"><a href="#tema10">Ejercicios y videos refuerzo </a></li>
                 
             </ul>            
         </section>
@@ -1151,6 +1159,92 @@
 
         <hr>
     </div>
+    <div id="thirdcontainer" >
+        <section>
+            <a name="tema9"></a>
+            <h1>Entrada de usuario de C#</h1>
+        </section>
+        <section>
+            <a name="tema9.1"></a>
+            <h2>Obtener información del usuario</h2>
+            <p>
+                Ya ha aprendido que Console.WriteLine()se utiliza para generar (imprimir) valores. Ahora usaremos Console.ReadLine()para obtener la entrada del usuario.
+                <br><br>
+                En el siguiente ejemplo, el usuario puede ingresar su nombre de usuario, que se almacena en la variable userName. Luego imprimimos el valor de userName:
+            </p>
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                // Type your username and press enter
+                Console.WriteLine("Enter username:");
+
+                // Create a string variable and get user input from the keyboard and store it in the variable
+                string userName = Console.ReadLine();
+
+                // Print the value of the variable (userName), which will display the input value
+                Console.WriteLine("Username is: " + userName);
+            </code></pre>
+        </section>
+        <section>
+            <a name="tema9.2"></a>
+            <h2>Entrada de usuario y números</h2>
+            <p>
+                El Console.ReadLine()método devuelve un string. Por lo tanto, no puede obtener información de otro tipo de datos, como int. El siguiente programa provocará un error:
+            </p>
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                Console.WriteLine("Enter your age:");
+                int age = Console.ReadLine();
+                Console.WriteLine("Your age is: " + age);
+            </code></pre>
+            <p>
+                El mensaje de error será algo como esto:
+                <br><br>
+                "Cannot implicitly convert type 'string' to 'int'"
+            </p>
+        </section>
+        <section>
+            <p>
+                Como dice el mensaje de error, no puede convertir implícitamente el tipo 'cadena' a 'int'.
+                <br><br>
+                Afortunadamente, para usted, acaba de aprender del capítulo anterior (Conversión de tipos) , que puede convertir cualquier tipo de forma explícita, utilizando uno de los Convert.Tométodos:
+            </p>
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                Console.WriteLine("Enter your age:");
+                int age = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Your age is: " + age);
+            </code></pre>
+            <p>
+                Nota: Si ingresa una entrada incorrecta (por ejemplo, texto en una entrada numérica), obtendrá un mensaje de excepción / error (como System.FormatException: 'La cadena de entrada no tenía el formato correcto').
+                <br><br>
+                Aprenderá más sobre Excepciones y cómo manejar errores en un capítulo posterior.
+            </p>
+        </section>
+        <hr>
+    </div>
+
+    <div id="secondcontainer" >
+        <section>
+            <a name="tema10"></a>
+            <h1>Ejercicios y Videos</h1>
+            <p>
+                <a name="tema10.1"></a>
+                <h2>Ejercicio 1</h2>
+                Realizar un codigo para generar "¡Hola mundo!".
+            </p>
+            <div class="ejemplo">
+                <p class="showEj" onclick="mostrar('ej1');return false">Click para mostrar/ocultar Ejercicio Resulto</p>
+                <p class="showTema" ><a href="#tema2">Click para ir a tema sobre ejercicio</a></p>
+                <br>
+                <a href="https://youtu.be/z2hq3hvssIg" class="video" target="_blank"><span class="textovideo">Video refuerzo</span></a>
+                <span id="ej1" class="oculto">
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                static void Main(string[] args)
+                {
+                Console.WriteLine("Hello World!");    
+                }
+            </code></pre>
+        </span>
+        </div>
+        </section>
+    </div>
 
 
     <footer>
@@ -1185,6 +1279,12 @@
         });
 
         });
+
+        /*Para ocultar soluciones de ejercicios*/
+        function mostrar(id){
+            obj=document.getElementById(id);
+            obj.style.visibility=(obj.style.visibility=='hidden')?'visible':'hidden';
+        }
     </script>
     <!--fin del script-->        
 </body>

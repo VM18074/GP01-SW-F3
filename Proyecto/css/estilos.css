@@ -184,7 +184,7 @@ pre.code-csharp4 code {
 .video:visited{
     color: black;  
     font-family: arial; 
-    text-decoration: none 
+    text-decoration: none;
 
 }
 .video:hover{
@@ -280,4 +280,47 @@ pre.code-csharp4 code {
 .ws-table-all tr:nth-child(odd) {background-color:#fff}.ws-table-all tr:nth-child(even){background-color:#E7E9EB}
 .ws-table-all td,.ws-table-all th {padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
 .ws-table-all th:first-child, .ws-table-all td:first-child{padding-left:16px}
+
+/*CSS para ejemplos y video*/
+.oculto{
+    visibility:hidden;
+ }
+ div.ejemplo:active span{
+    display:block;
+}
+.showEj{
+    background-color: #2eb62e;
+    color: rgb(0, 0, 0);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer
+}
+.showEj:hover{
+    background-color: rgb(39, 255, 1);
+}
+
+.showTema{
+    background-color: #2e84b6;
+    color: rgb(0, 0, 0);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+}
+.showTema:hover{
+    background-color: rgb(1, 247, 255);
+}
+
+.showTema a{
+    text-decoration:none;
+    color: rgb(0, 0, 0);
+}
+.showTema a:visited{
+    text-decoration:none;
+}
+.showTema a:hover{
+    text-decoration:none;
+}
 
