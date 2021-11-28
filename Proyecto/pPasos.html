@@ -38,6 +38,9 @@
                 <li class="tema"><a href="#tema1">Uso de IDE para pruebas y ejercicios</a></li>
                 <li class="tema"><a href="#tema2">Sintaxis </a></li>
                 <li class="tema"><a href="#tema3">Comentarios</a></li>
+                <ul>
+                    <li><a href="#tema3.1">a</a></li>
+                </ul>
                 <li class="tema"><a href="#tema4">Convenciones de codificación</a></li>
                 <li class="tema"><a href="#tema5">Variables</a></li>
                 <li class="tema"><a href="#tema6">Tipos de datos</a></li>
@@ -171,6 +174,7 @@
             </p>
         </section>
         <section>
+            <a name="tema3.1"></a>
             <h3>Comentarios de una sola línea</h3>
             <p>
                 Los comentarios de una sola línea comienzan con dos barras diagonales ( //).
@@ -193,6 +197,7 @@
             
         </section>
         <section>
+            <a name="tema3.2"></a>
             <h3>Comentarios de varias líneas de C #</h3>
             <p>
                 Los comentarios de varias líneas comienzan con /*y terminan con */.
@@ -428,6 +433,127 @@
                 <br>
                 bool - almacena valores con dos estados: verdadero o falso
             </p>
+        </section>
+
+        <section>
+            <a name="tema5.1"></a>
+            <h3>Declaración (creación) de variables</h3>
+            <p>
+                Para crear una variable, debe especificar el tipo y asignarle un valor:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                type variableName = value;
+            </code></pre>
+            <p>
+                Donde tipo es un tipo de C # (como into string) y variableName es el nombre de la variable (como x o nombre ). El signo igual se utiliza para asignar valores a la variable.
+
+                Para crear una variable que debería almacenar texto, observe el siguiente ejemplo:
+            </p>
+        </section>
+        <section>
+            
+            <h3>Ejemplo 1</h3>
+            <p>
+                Cree una variable llamada nombre de tipo stringy asígnele el valor " John ":
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                string name = "John";
+                Console.WriteLine(name);
+            </code></pre>
+            
+        </section>
+        <section>
+            
+            <h3>Ejemplo 2</h3>
+            <p>
+                Para crear una variable que debería almacenar un número, observe el siguiente ejemplo:
+                <br><br>
+                Cree una variable llamada myNum of type inty asígnele el valor 15 :
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int myNum = 15;
+                Console.WriteLine(myNum);
+            </code></pre>
+            
+        </section>
+        <section>
+            
+            <h3>Ejemplo 3</h3>
+            <p>
+                También puede declarar una variable sin asignar el valor y asignar el valor más tarde:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int myNum;
+                myNum = 15;
+                Console.WriteLine(myNum);
+            </code></pre>
+            
+        </section>
+        <section>
+            
+            <h3>Ejemplo 4</h3>
+            <p>
+                Tenga en cuenta que si asigna un nuevo valor a una variable existente, sobrescribirá el valor anterior:
+                <br><br>
+                Cambie el valor de myNuma 20:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int myNum = 15;
+                myNum = 20; // myNum is now 20
+                Console.WriteLine(myNum);
+            </code></pre>
+            
+        </section>
+        <section>
+            
+            <h3>Declarar muchas variables</h3>
+            <p>
+                Para declarar más de una variable del mismo tipo , use una lista separada por comas:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int x = 5, y = 6, z = 50;
+                Console.WriteLine(x + y + z);
+            </code></pre>
+            
+
+        </section>
+        <section>
+            <a name="tema5.2"></a>
+            <h2>Constantes</h2>
+            <p>
+                Sin embargo, puede agregar la constpalabra clave si no desea que otros (o usted mismo) sobrescriban los valores existentes (esto declarará la variable como "constante", lo que significa inmutable y de solo lectura):
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                const int myNum = 15;
+                myNum = 20; // error
+            </code></pre>
+            <p>
+                La constpalabra clave es útil cuando desea que una variable almacene siempre el mismo valor, para que otros (o usted mismo) no estropeen su código. Un ejemplo que a menudo se denomina constante es PI (3,14159 ...).
+                <br><br>
+                Nota: no puede declarar una variable constante sin asignar el valor. Si lo hace, se producirá un error: un campo constante requiere que se proporcione un valor .
+            </p>
+        </section>
+        <section>
+            <a name="tema5.3"></a>
+            <h2>Variables de visualización</h2>
+            <p>
+                El WriteLine()método se usa a menudo para mostrar valores de variables en la ventana de la consola.
+                <br><br>
+                Para combinar texto y una variable, use el +carácter:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                string name = "John";
+                Console.WriteLine("Hello " + name);
+            </code></pre>
+            
         </section>
     </div>
     <footer>
