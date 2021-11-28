@@ -2,12 +2,15 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title>Programación en C#</title>
 </head>
 <body>
+    <span class="ir-arriba icon-arrow-up2"></span>
     <header>
         <div id="navigation">
             <ul>
@@ -78,6 +81,25 @@
             document.execCommand("copy");
             document.body.removeChild(aux);
                 }
+
+                /*Boton arriba*/
+        $(document).ready(function(){
+
+        $('.ir-arriba').click(function(){
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function(){
+            if( $(this).scrollTop() > 0 ){
+                $('.ir-arriba').slideDown(300);
+            } else {
+                $('.ir-arriba').slideUp(300);
+            }
+        });
+
+        });
     </script>
     <!--fin del script-->        
 </body>
