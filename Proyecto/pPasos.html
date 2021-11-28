@@ -51,7 +51,27 @@
                         <li class="subtema"><a href="#tema5.3">Variables de visualización</a></li>
                     </ul>
                 </li>
-                <li class="tema"><a href="#tema6">Tipos de datos</a></li>
+                <li class="tema"><a href="#tema6">Tipos de datos</a>
+                    <ul class="subtemaI">
+                        <li class="subtema"><a href="#tema6.1">Números</a></li>
+                        <li class="subtema"><a href="#tema6.2">Tipos de enteros</a>
+                            <ul class="subtemaII">
+                                <li class="subtema1"><a href="#tema6.2.1">Int</a></li>
+                                <li class="subtema1"><a href="#tema6.2.2">Long</a></li>
+                            </ul>
+                        </li>
+                        <li class="subtema"><a href="#tema6.3">Tipos de punto flotante</a>
+                            <ul class="subtemaII">
+                                <li class="subtema1"><a href="#tema6.3.1">Float</a></li>
+                                <li class="subtema1"><a href="#tema6.3.2">Double</a></li>
+                                <li class="subtema1"><a href="#tema6.3.2">Números científicos</a></li>
+                            </ul>
+                        </li>
+                        <li class="subtema"><a href="#tema6.4">Booleanos</a></li>
+                        <li class="subtema"><a href="#tema6.5">Caracteres</a></li>
+                        <li class="subtema"><a href="#tema6.6">String</a></li>
+                    </ul>
+                </li>
                 <li class="tema"><a href="#tema7">Casting en C#</a></li>
                 <li class="tema"><a href="#tema8">Operadores</a></li>
                 
@@ -564,6 +584,229 @@
             
         </section>
     </div>
+
+    <div id="secondcontainer" >
+        <section>
+            <a name="tema6"></a>
+            <h1>Tipos de datos de C#</h1>
+        </section>
+        <section>
+            <!--<a name="tema5.3"></a>-->
+            <p>
+                Como se explica en el capítulo de variables, una variable en C # debe ser un tipo de datos especificado:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int myNum = 5;               // Integer (whole number)
+                double myDoubleNum = 5.99D;  // Floating point number
+                char myLetter = 'D';         // Character
+                bool myBool = true;          // Boolean
+                string myText = "Hello";     // String
+            </code></pre>
+            
+        </section>
+        <section>
+            <p>
+                Un tipo de datos especifica el tamaño y el tipo de valores de variable. Es importante utilizar el tipo de datos correcto para la variable correspondiente; para evitar errores, para ahorrar tiempo y memoria, pero también hará que su código sea más fácil de mantener y leer.
+            </p>
+            <table class="ws-table-all notranslate">
+                <tbody><tr>
+                <th style="width:20%">Tipo de datos</th>
+                <th style="width:17%">Tamaño</th>
+                <th style="width:63%">Descripción</th>
+                </tr>
+                <tr>
+                <td>int</td>
+                <td>4 bytes</td>
+                <td>Almacena números enteros de -2,147,483,648 a 2,147,483,647</td>
+                </tr>
+                <tr>
+                <td>long</td>
+                <td>8 bytes</td>
+                <td>Almacena números enteros de -9,223,372,036,854,775,808 a 
+                9,223,372,036,854,775,807</td>
+                </tr>
+                <tr>
+                <td>float</td>
+                <td>4 bytes</td>
+                <td>Almacena números fraccionarios. Suficiente para
+                    almacenar 6 a 7 dígitos decimales</td>
+                </tr>
+                <tr>
+                <td>double</td>
+                <td>8 bytes</td>
+                <td>Almacena números fraccionarios. Suficiente para
+                    almacenar 15 dígitos decimales</td>
+                </tr>
+                <tr>
+                <td>bool</td>
+                <td>1 bit</td>
+                <td>Almacena valores verdaderos o falsos</td>
+                </tr>
+                <tr>
+                <td>char</td>
+                <td>2 bytes</td>
+                <td>Almacena un solo carácter / letra, rodeado de comillas simples</td>
+                </tr>
+                <tr>
+                <td>string</td>
+                <td>2 bytes por carácter</td>
+                <td>Almacena una secuencia de caracteres, rodeada de comillas dobles.</td>
+                </tr>
+                
+                </tbody>
+                </table>
+        </section>
+
+        <section>
+            <a name="tema6.1"></a>
+            <h2>Números</h2>
+            <p>
+                Los tipos de números se dividen en dos grupos:
+                <br><br>
+                Los tipos enteros almacenan números enteros, positivos o negativos (como 123 o -456), sin decimales. Los tipos válidos son int y long. El tipo que debe utilizar depende del valor numérico.
+                <br><br>
+                Los tipos de coma flotante representan números con una parte fraccionaria, que contienen uno o más decimales. Los tipos válidos son floaty double.
+                <br><br>
+                Aunque hay muchos tipos numéricos en C #, los más utilizados para números son int(para números enteros) y double(para números de coma flotante). Sin embargo, los describiremos todos a medida que continúe leyendo.
+            </p>
+        </section>
+        <section>
+            <a name="tema6.2"></a>
+            <h2>Tipos de enteros</h2>
+            <p>
+                <a name="tema6.2.1"></a>
+                <h3>Int</h3>
+                El int tipo de datos puede almacenar números enteros desde -2147483648 hasta 2147483647. En general, y en nuestro tutorial, el inttipo de datos es el tipo de datos preferido cuando creamos variables con un valor numérico.
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int myNum = 100000;
+                Console.WriteLine(myNum);
+            </code></pre>
+            
+        </section>
+        <section>
+            
+            
+            <p>
+                <a name="tema6.2.2"></a>
+                <h3>Long</h3>
+                El long tipo de datos puede almacenar números enteros desde -9223372036854775808 hasta 9223372036854775807. Se utiliza cuando intno es lo suficientemente grande para almacenar el valor. Tenga en cuenta que debe terminar el valor con una "L":
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                long myNum = 15000000000L;
+                Console.WriteLine(myNum);
+            </code></pre>
+            
+        </section>
+
+        <section>
+            <a name="tema6.3"></a>
+            <h2>Tipos de punto flotante</h2>
+            <p>
+                <a name="tema6.3.1"></a>
+                <h3>Float</h3>
+                El float tipo de datos puede almacenar números fraccionarios de 3.4e − 038 a 3.4e + 038. Tenga en cuenta que debe terminar el valor con una "F":
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                float myNum = 5.75F;
+                Console.WriteLine(myNum);
+            </code></pre>
+            
+        </section>
+
+        <section>
+            
+            
+            <p>
+                <a name="tema6.3.2"></a>
+                <h3>Double</h3>
+                El double tipo de datos puede almacenar números fraccionarios de 1.7e − 308 a 1.7e + 308. Tenga en cuenta que puede terminar el valor con una "D" (aunque no es obligatorio):
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                double myNum = 19.99D;
+                Console.WriteLine(myNum);
+            </code></pre>
+            <p>
+                ¿Usar floato double?
+                <br><br>
+                La precisión de un valor de punto flotante indica cuántos dígitos puede tener el valor después del punto decimal. La precisión de floates de solo seis o siete dígitos decimales, mientras que las doublevariables tienen una precisión de aproximadamente 15 dígitos. Por lo tanto, es más seguro utilizarlo doublepara la mayoría de los cálculos.
+            </p>
+        </section>
+        <section>
+            
+            
+            <p>
+                <a name="tema6.3.3"></a>
+                <h3>Números científicos</h3>
+                Un número de coma flotante también puede ser un número científico con una "e" para indicar la potencia de 10:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                float f1 = 35e3F;
+                double d1 = 12E4D;
+                Console.WriteLine(f1);
+                Console.WriteLine(d1);
+            </code></pre>
+            
+        </section>
+        <section>
+            
+            
+            <p>
+                <a name="tema6.4"></a>
+                <h2>Booleanos</h2>
+                Un tipo de datos booleano se declara con la boolpalabra clave y solo puede tomar los valores trueo false:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                bool isCSharpFun = true;
+                bool isFishTasty = false;
+                Console.WriteLine(isCSharpFun);   // Outputs True
+                Console.WriteLine(isFishTasty);   // Outputs False
+            </code></pre>
+            <p>
+                Los valores booleanos se utilizan principalmente para pruebas condicionales, sobre las que aprenderá más en un capítulo posterior.
+            </p>
+        </section>
+
+        <section>
+            
+            
+            <p>
+                <a name="tema6.5"></a>
+                <h2>Caracteres</h2>
+                El chartipo de datos se utiliza para almacenar un solo carácter. El carácter debe estar entre comillas simples, como 'A' o 'c':
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                char myGrade = 'B';
+                Console.WriteLine(myGrade); 
+            </code></pre>
+        </section>
+        <section>
+            
+            
+            <p>
+                <a name="tema6.6"></a>
+                <h2>Strings</h2>
+                El string tipo de datos se utiliza para almacenar una secuencia de caracteres (texto). Los valores de cadena deben estar entre comillas dobles:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                string greeting = "Hello World";
+                Console.WriteLine(greeting);
+            </code></pre>
+        </section>
+
+        
+    </div>
+
+
     <footer>
         TPI115-2021 FIA-UES Grupo 01
     </footer>

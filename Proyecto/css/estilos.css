@@ -245,10 +245,21 @@ pre.code-csharp4 code {
     
 }
 
-/*.tema ul li ul {
+
+.subtema1 {
     right:-140px;
     top:0px;
-}*/
+}
+
+.subtema1 a{
+    background-color:rgb(26, 73, 34);
+    color:#fff;
+    
+}
+.subtema1 a:hover{
+    background-color:#457050;
+    
+}
 
 /*CSS flecha ir arriba */
 .ir-arriba{
@@ -262,4 +273,11 @@ pre.code-csharp4 code {
 	bottom:20px;
 	right:20px;
 }
+
+/*CSS para tabla */
+.ws-table-all {border-collapse:collapse;border-spacing:0;width:100%;display:table;border:1px solid #ccc}
+.ws-table-all tr {border-bottom:1px solid #ddd}
+.ws-table-all tr:nth-child(odd) {background-color:#fff}.ws-table-all tr:nth-child(even){background-color:#E7E9EB}
+.ws-table-all td,.ws-table-all th {padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.ws-table-all th:first-child, .ws-table-all td:first-child{padding-left:16px}
 
