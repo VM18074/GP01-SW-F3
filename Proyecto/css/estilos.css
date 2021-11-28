@@ -219,18 +219,30 @@ pre.code-csharp4 code {
     background-color:#434343;
 }
 
-.tema ul {
+.tema .subtemaI {
     display:none;
-    position:absolute;
-    min-width:140px;
-}
-
-.tema:hover > ul {
-    display:block;
-}
-
-.tema ul li {
     position:relative;
+    min-width:140px;
+    
+}
+
+.tema:hover > .subtemaI {
+    display:block;
+    
+}
+
+.subtema {
+    position:relative;
+    
+}
+.subtema a{
+    background-color:rgb(63, 27, 27);
+    color:#fff;
+    
+}
+.subtema a:hover{
+    background-color:#704545;
+    
 }
 
 /*.tema ul li ul {
