@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <link rel="stylesheet" href="css/estilos.css" type="text/css">
     <link rel="stylesheet" href="css/fonts.css" type="text/css">
@@ -9,6 +10,7 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title>Programación en C#</title>
 </head>
+
 <body>
     <span class="ir-arriba icon-arrow-up2"></span>
     <header>
@@ -16,6 +18,7 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="pPasos.html">Primeros pasos</a></li>
+                <li><a href="intermedio.html">Intermedio</a></li>
                 <li><a href="">Avanzado</a></li>
                 <li><a href="about.html">Misión y Visión</a></li>
             </ul>
@@ -24,10 +27,12 @@
     <div id="firstcontainer">
         <section>
             <h2>Nivel Intermedio</h2>
-            <p>En este nivel aprenderás los conocimientos básicos de las estructuras aplicadas en el lenguaje C#, recuerda el
-                aprendizaje es secuencial, deberás de haber aprendido los temas explicados en el nivel “Primeros Pasos” para
+            <p>En este nivel aprenderás los conocimientos básicos de las estructuras aplicadas en el lenguaje C#,
+                recuerda el
+                aprendizaje es secuencial, deberás de haber aprendido los temas explicados en el nivel “Primeros Pasos”
+                para
                 continuar. Te deseamos el mejor de los éxitos en tu aprendizaje.</p>
-            
+
         </section>
     </div>
     <div id="secondcontainer">
@@ -35,31 +40,247 @@
         <section>
             <h2>Agenda: </h2>
             <ul class="inicioN">
-                <li class="tema"><a href="">Tipos de Arreglos</a></li>
-                <li class="tema"><a href="">Sentencia Condicional if </a></li>
-                <li class="tema"><a href="">Sentencia Condicional if-else</a></li>
-                <li class="tema"><a href="">Sentencia Condicional if-else if-else</a></li>
-                <li class="tema"><a href="">Etructura de repeticion while</a></li>
-                <li class="tema"><a href="">Etructura de repeticion Dowhile</a></li>
-                <li class="tema"><a href="">Etructura de repeticion for</a></li>
-                <li class="tema"><a href="">Etructura de en C#</a></li>
-            </ul>            
+                <li class="tema"><a href="#tema1">Tipos de Arreglos</a></li>
+                <li class="tema"><a href="#tema2">Sentencia Condicional if </a></li>
+                <li class="tema"><a href="#tema3">Sentencia Condicional if-else</a></li>
+                <li class="tema"><a href="#tema4">Sentencia Condicional if-else if-else</a></li>
+                <li class="tema"><a href="#tema5">Estructura de repeticion while</a></li>
+                <li class="tema"><a href="#tema6">Estructura de repeticion Dowhile</a></li>
+                <li class="tema"><a href="#tema7">Estructura de repeticion for</a></li>
+                <li class="tema"><a href="#tema8">Estructura de en C#</a></li>
+            </ul>
         </section>
-
+        <br>
         <hr>
     </div>
+    <!--XXXXXXXXXXXXXXXXXXXXXX TEMA----1--------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
     <div id="thirdcontainer">
         <section>
-            <h2>aqui intentaremos poner el codigo solo ejemplo primero F</h2>
+            <a name="tema1"></a>
+            <h2>Tipos de Arreglos</h2>
+
+            <p>
+                Los arreglos en C# también conocidos como Arrays al igual que en la mayoria de lenguajes de programación
+                orientados a objetos, son indexados iniciando en
+                cero (0). La forma de trabajo es muy similar a la mayoría de lenguajes pero hay algunas diferencias que
+                notarán.
+                <br>
+                Cuando vayamos a declarar un arreglo en debemos colocar los corchetes después de tipo de dato.
+            </p>
+        </section>
+        <section>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp4' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                //Declaración valida
+                int[] valores;                   
+            </code></pre>
+        </section>
+        <section>
+            <p>
+                En C# podemos indicar el tamaño del arreglo luego de la declaración. Esto nos permite decidir que tamaño
+                va a tener el arreglo según lo que necesitemos.
+                <br>
+                En C# tambien se pueden declarar matriz, es muy similar al arreglo pero con doble corchete[], ademas los
+                vectores
+                o matriz se pueden crear independiente de su tipo de dato, a continuacion un par de ejemplos:
+            </p>
+            <pre class='code code-csharp4' onclick="copiarAlPortapapeles('p9')"><label>C#</label><code id="p9">
+            //Arreglo definiendo su tamaño. 
+            int[] valores; //valores sin inicializar
+            valores = new int[100];  //100 elementos  
+
+            //Arreglo de arreglos
+            int[][] matriz;                   //sin inicializar
+            //Los arreglos de arreglos se inicializan de manera diferente
+            int[][] matriz = new int[3][];
+                for (int i = 0; i < matriz.Length; i++)
+                {
+                    matriz[i] = new int[4];
+                }
+
+        </code></pre>
+        </section>
+        <hr>
+        <br>
+
+    </div>
+    <!--XXXXXXXXXXXXXXXXXXXXXX TEMA------2--------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    <div id="secondcontainer">
+        <section>
+            <a name="tema2"></a>
+            <h2>Sentencia Condicional if</h2>
+            <br>
+            <p>
+                La sentencia condicional if se usa para tomar decisiones, este evaluá básicamente una operación lógica,
+                es decir una
+                expresión que de como resultado Verdadero o Falso, y ejecuta la pieza de código siguiente siempre y
+                cuando el resultado sea
+                verdadero.
+                <br>
+                <br>
+                La sentencia if EXPRESION, significa, Si se cumple la expresión condicional se ejecuta el bloque de
+                sentencias seguidas.
+            </p>
+        </section>
+        <section>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp4' onclick="copiarAlPortapapeles('p2')"><label>C#</label><code id="p2">
+                
+                if (edad <= 18) //Condición.
+                {
+                    Console.WriteLine("Es un adolescente."); 
+                    //Se ejecutara si la condición es verdadera. 
+                }
+            </code></pre>
+
+        </section>
+        <hr>
+        <br>
+        <br>
+
+
+    </div>
+    <!--XXXXXXXXXXXXXXXXXXXXXX TEMA---------3---------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    <div id="thirdcontainer">
+        <section>
+            <a name="tema3"></a>
+            <h2>Sentencia Condicional if-else</h2>
+            <img class="img-intermedio" src="images/ifelse.gif" alt="Imagen ifelse">
+            <br>         
+            <p>
+               
+                A la instrucción if se le puede agregar una cláusula else, que permite ejecutar una instrucción o un
+                bloque de instrucciones en el caso de que la condición no se cumpla.
+                <br>
+                <br>
+                En la siguiente imagen definimos la condició, esta como sabemos es de tipo booleano, que significa que solo posee dos resultados,
+                verdadero representadop por el bloque 1, y falso representado por el bloque2, lo que significa que dependiendo del resultado de la condición
+                sera el bloque de código que se va a ejecutar, en este tipo de sentencias es imposible que se ejecuten los dos bloques de código.                            
+                <br>
+                <br>
+            </p>
+        </section>
+        <section>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp1' onclick="copiarAlPortapapeles('p3')"><label>C#</label><code id="p3">
+                if (edad <= 18)
+                {
+                    Console.WriteLine("Es un adolescente."); 
+                    //Se ejecutara si la condición es verdadera. 
+                }
+                else
+                {
+                    Console.WriteLine("No es un adolescente."); 
+                    //Se ejecutara si la condición es falsa
+                }
+                   
+            </code></pre>
+
+        </section>
+        <hr>
+        <br>
+        <br>
+
+
+    </div>
+    <!--XXXXXXXXXXXXXXXXXXXXXX TEMA-----4--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    <div id="secondcontainer">
+        <section>
+            <a name="tema4"></a>
+            <h2>Sentencia Condicional if-else if-else</h2>
             <br>
         </section>
         <section>
             <!--aplicando interfaz de codigo. -->
-            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p4')"><label>C#</label><code id="p4">
              
                    
             </code></pre>
-            
+
+        </section>
+        <hr>
+        <br>
+        <br>
+
+
+    </div>
+    <!--XXXXXXXXXXXXXXXXXXXXXX TEMA--------5-----------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    <div id="thirdcontainer">
+        <section>
+            <a name="tema5"></a>
+            <h2>Estructura de repeticion while</h2>
+            <br>
+        </section>
+        <section>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p5')"><label>C#</label><code id="p5">
+             
+                   
+            </code></pre>
+
+        </section>
+        <hr>
+        <br>
+        <br>
+
+
+    </div>
+    <!--XXXXXXXXXXXXXXXXXXXXXX TEMA------6----------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    <div id="secondcontainer">
+        <section>
+            <a name="tema6"></a>
+            <h2>Estructura de repeticion Dowhile</h2>
+            <br>
+        </section>
+        <section>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p6')"><label>C#</label><code id="p6">
+             
+                   
+            </code></pre>
+
+        </section>
+        <hr>
+        <br>
+        <br>
+
+
+    </div>
+    <!--XXXXXXXXXXXXXXXXXXXXXX TEMA-------7----------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    <div id="thirdcontainer">
+        <section>
+            <a name="tema7"></a>
+            <h2>Estructura de repeticion for</h2>
+            <br>
+        </section>
+        <section>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p7')"><label>C#</label><code id="p7">
+             
+                   
+            </code></pre>
+
+        </section>
+        <hr>
+        <br>
+        <br>
+
+
+    </div>
+    <!--XXXXXXXXXXXXXXXXXXXXXX TEMA--8------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    <div id="secondcontainer">
+        <section>
+            <a name="tema8"></a>
+            <h2>Estructura de en C#</h2>
+            <br>
+        </section>
+        <section>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p8')"><label>C#</label><code id="p8">
+             
+                   
+            </code></pre>
+
         </section>
         <hr>
         <br>
@@ -74,33 +295,34 @@
     <!--script para copiar el código-->
     <script type='text/javascript'>
         function copiarAlPortapapeles(id_elemento) {
-             var aux = document.createElement("input");
+            var aux = document.createElement("input");
             aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
             document.body.appendChild(aux);
             aux.select();
             document.execCommand("copy");
             document.body.removeChild(aux);
+        }
+
+        /*Boton arriba*/
+        $(document).ready(function () {
+
+            $('.ir-arriba').click(function () {
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('.ir-arriba').slideDown(300);
+                } else {
+                    $('.ir-arriba').slideUp(300);
                 }
-
-                /*Boton arriba*/
-        $(document).ready(function(){
-
-        $('.ir-arriba').click(function(){
-            $('body, html').animate({
-                scrollTop: '0px'
-            }, 300);
-        });
-
-        $(window).scroll(function(){
-            if( $(this).scrollTop() > 0 ){
-                $('.ir-arriba').slideDown(300);
-            } else {
-                $('.ir-arriba').slideUp(300);
-            }
-        });
+            });
 
         });
     </script>
-    <!--fin del script-->        
+    <!--fin del script-->
 </body>
+
 </html>
