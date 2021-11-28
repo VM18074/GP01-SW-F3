@@ -72,8 +72,21 @@
                         <li class="subtema"><a href="#tema6.6">String</a></li>
                     </ul>
                 </li>
-                <li class="tema"><a href="#tema7">Casting en C#</a></li>
-                <li class="tema"><a href="#tema8">Operadores</a></li>
+                <li class="tema"><a href="#tema7">Casting en C#</a>
+                    <ul class="subtemaI">
+                        <li class="subtema"><a href="#tema7.1">Casting implícito</a></li>
+                        <li class="subtema"><a href="#tema7.2">Casting explícito</a></li>
+                        <li class="subtema"><a href="#tema7.3">Métodos de conversión de tipos</a></li>
+                    </ul>
+                </li>
+                <li class="tema"><a href="#tema8">Operadores</a>
+                    <ul class="subtemaI">
+                        <li class="subtema"><a href="#tema8.1">Operadores aritméticos</a></li>
+                        <li class="subtema"><a href="#tema8.2">Operadores de asignación de C#</a></li>
+                        <li class="subtema"><a href="#tema8.3">Operadores de comparación de C#</a></li>
+                        <li class="subtema"><a href="#tema8.4">Operadores lógicos de C#</a></li>
+                    </ul>
+                </li>
                 
             </ul>            
         </section>
@@ -583,6 +596,7 @@
             </code></pre>
             
         </section>
+        <hr>
     </div>
 
     <div id="secondcontainer" >
@@ -802,8 +816,340 @@
                 Console.WriteLine(greeting);
             </code></pre>
         </section>
+        <hr>
+    </div>
 
-        
+    <div id="thirdcontainer" >
+
+        <section>
+            <a name="tema7"></a>
+            <h1>Casting de tipo C #</h1>
+        </section>
+        <section>
+            <p>
+                La conversión de tipos es cuando asigna un valor de un tipo de datos a otro tipo.
+                <br><br>
+                En C #, hay dos tipos de conversión:
+                <br><br>
+                Conversión implícita (automáticamente): conversión de un tipo más pequeño a un tamaño de letra más grande
+                char-> int-> long-> float->double
+                <br><br>
+                Conversión explícita (manualmente): conversión de un tipo más grande en un tipo de tamaño más pequeño
+                double-> float-> long-> int->char
+            </p>
+        </section>
+        <section>
+            
+            
+            <p>
+                <a name="tema7.1"></a>
+                <h2>Casting implícito</h2>
+                La conversión implícita se realiza automáticamente al pasar un tipo de tamaño más pequeño a un tipo de tamaño más grande:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int myInt = 9;
+                double myDouble = myInt;       // Automatic casting: int to double
+
+                Console.WriteLine(myInt);      // Outputs 9
+                Console.WriteLine(myDouble);   // Outputs 9
+            </code></pre>
+        </section>
+        <section>
+            
+            
+            <p>
+                <a name="tema7.2"></a>
+                <h2>Casting explícito</h2>
+                La conversión explícita se debe realizar manualmente colocando el tipo entre paréntesis delante del valor:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                double myDouble = 9.78;
+                int myInt = (int) myDouble;    // Manual casting: double to int
+
+                Console.WriteLine(myDouble);   // Outputs 9.78
+                Console.WriteLine(myInt);      // Outputs 9
+            </code></pre>
+        </section>
+
+        <section>
+            
+            
+            <p>
+                <a name="tema7.3"></a>
+                <h2>Métodos de conversión de tipos</h2>
+                También es posible convertir tipos de datos de forma explícita mediante el uso de una función de métodos, tales como Convert.ToBoolean, Convert.ToDouble, Convert.ToString, Convert.ToInt32( int) y Convert.ToInt64( long):
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int myInt = 10;
+                double myDouble = 5.25;
+                bool myBool = true;
+
+                Console.WriteLine(Convert.ToString(myInt));    // convert int to string
+                Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
+                Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
+                Console.WriteLine(Convert.ToString(myBool));   // convert bool to string
+            </code></pre>
+            <p>
+                <h3>¿Por qué la conversión?</h3>
+                Muchas veces, no es necesario realizar una conversión de tipo. Pero a veces tienes que hacerlo. Eche un vistazo al siguiente capítulo, cuando trabaje con la entrada del usuario , para ver un ejemplo de esto.
+            </p>
+        </section>
+        <hr>
+    </div>
+
+    <div id="secondcontainer" >
+        <section>
+            <a name="tema8"></a>
+            <h1>Operadores de C#</h1>
+        </section>
+        <section>      
+            <p>
+
+                Los operadores se utilizan para realizar operaciones sobre variables y valores.
+                <br><br>
+                En el siguiente ejemplo, usamos el + operador para sumar dos valores:
+            </p>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int x = 100 + 50;
+            </code></pre>
+            <p>
+                Aunque el + operador se usa a menudo para sumar dos valores, como en el ejemplo anterior, también se puede usar para sumar una variable y un valor, o una variable y otra variable:
+            </p>
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int sum1 = 100 + 50;        // 150 (100 + 50)
+                int sum2 = sum1 + 250;      // 400 (150 + 250)
+                int sum3 = sum2 + sum2;     // 800 (400 + 400)
+            </code></pre>
+        </section>
+
+        <section>
+            <a name="tema8.1"></a>
+            <h2>Operadores aritméticos</h2>
+            <table class="ws-table-all notranslate">
+                <tbody><tr>
+                <th style="width:15%">Operador</th>
+                <th style="width:18%">Nombre</th>
+                <th style="width:40%">Descripción</th>
+                <th style="width:17%;">Ejemplo</th>
+                </tr>
+                <tr>
+                <td>+</td>
+                <td>Adición</td>
+                <td>Suma dos valores</td>
+                <td>x + y</td>
+                </tr>
+                <tr>
+                <td>-</td>
+                <td>Sustracción</td>
+                <td>Resta un valor de otro</td>
+                <td>x - y</td>
+                </tr>
+                <tr>
+                <td>*</td>
+                <td>Multiplicación</td>
+                <td>Multiplica dos valores</td>
+                <td>x * y</td>
+                </tr>
+                <tr>
+                <td>/</td>
+                <td>División</td>
+                <td>Divide un valor por otro</td>
+                <td>x / y</td>
+                </tr>
+                <tr>
+                <td>%</td>
+                <td>Módulo</td>
+                <td>Devuelve el resto de la división</td>
+                <td>x % y</td>
+                </tr>
+                <tr>
+                <td>++</td>
+                <td>Incremento</td>
+                <td>Aumenta el valor de una variable en 1</td>
+                <td>x++</td>
+                </tr>
+                <tr>
+                <td>--</td>
+                <td>Decremento</td>
+                <td>Disminuye el valor de una variable en 1</td>
+                <td>x--</td>
+                </tr>
+                </tbody>
+                </table>
+        </section>
+
+        <section>
+            <a name="tema8.2"></a>
+            <h2>Operadores de asignación de C#</h2>
+            <p>
+                Los operadores de asignación se utilizan para asignar valores a las variables.
+                <br><br>
+                En el siguiente ejemplo, usamos el operador de asignación ( =) para asignar el valor 10 a una variable llamada x :
+            </p>
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int x = 10;
+            </code></pre>
+            <p>
+                El operador de asignación de+= suma ( ) agrega un valor a una variable:
+            </p>
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                int x = 10;
+                x += 5;
+            </code></pre>
+        </section>
+        <section>
+            
+            <h2>Operadores de asignación</h2>
+            <table class="ws-table-all notranslate">
+                <tr>
+                <th style="width:30%">Operador</th>
+                <th style="width:30%">Ejemplo</th>
+                <th style="width:30%">Igual que</th>
+                </tr>
+                <tr>
+                <td>=</td>
+                <td>x = 5</td>
+                <td>x = 5</td>
+                </tr>
+                  <tr>
+                <td>+=</td>
+                <td>x += 3</td>
+                <td>x = x + 3</td>
+                  </tr>
+                  <tr>
+                <td>-=</td>
+                <td>x -= 3</td>
+                <td>x = x - 3</td>
+                  </tr>
+                  <tr>
+                <td>*=</td>
+                <td>x *= 3</td>
+                <td>x = x * 3</td>
+                  </tr>
+                  <tr>
+                <td>/=</td>
+                <td>x /= 3</td>
+                <td>x = x / 3</td>
+                 </tr>
+                  <tr>
+                <td>%=</td>
+                <td>x %= 3</td>
+                <td>x = x % 3</td>
+                  </tr>
+                  <tr>
+                <td>&amp;=</td>
+                <td>x &amp;= 3</td>
+                <td>x = x &amp; 3</td>
+                  </tr>
+                  <tr>
+                <td>|=</td>
+                <td>x |= 3</td>
+                <td>x = x | 3</td>
+                  </tr>
+                <tr>
+                <td>^=</td>
+                <td>x ^= 3</td>
+                <td>x = x ^ 3</td>
+                </tr>
+                <tr>
+                <td>&gt;&gt;=</td>
+                <td>x &gt;&gt;= 3</td>
+                <td>x = x &gt;&gt; 3</td>
+                </tr>
+                <tr>
+                <td>&lt;&lt;=</td>
+                <td>x &lt;&lt;= 3</td>
+                <td>x = x &lt;&lt; 3</td>
+                </tr>
+                </table>
+        </section>
+        <section>
+            <a name="tema8.3"></a>>
+            <h2>Operadores de comparación de C#</h2>
+            <p>
+                Los operadores de comparación se utilizan para comparar dos valores:
+            </p>
+            <table class="ws-table-all notranslate">
+                <tr>
+                <th style="width:25%">Operador</th>
+                <th style="width:35%">Nombre</th>
+                <th style="width:30%">Ejemplo</th>
+                </tr>
+                <tr>
+                <td>==</td>
+                <td>Igual a</td>
+                <td>x == y</td>
+                </tr>
+                <tr>
+                <td>!=</td>
+                <td>No es igual</td>
+                <td>x != y</td>
+                </tr>
+                <tr>
+                <td>&gt;</td>
+                <td>Mas grande que</td>
+                <td>x &gt; y</td>
+                </tr>
+                <tr>
+                <td>&lt;</td>
+                <td>Menos que</td>
+                <td>x &lt; y</td>
+                </tr>
+                  <tr>
+                <td>&gt;=</td>
+                <td>Mayor qué o igual a</td>
+                <td>x &gt;= y</td>
+                  </tr>
+                <tr>
+                <td>&lt;=</td>
+                <td>Menos que o igual a</td>
+                <td>x &lt;= y</td>
+                </tr>
+                </table>
+        </section>
+
+        <section>
+            <a name="tema8.4"></a>
+            <h2>Operadores lógicos de C#</h2>
+            <p>
+                Los operadores lógicos se utilizan para determinar la lógica entre variables o valores:
+            </p>
+            <table class="ws-table-all notranslate">
+                <tr>
+                <th style="width:15%">Operador</th>
+                <th style="width:20%">Nombre</th>
+                <th style="width:35%">Descripción</th>
+                <th style="width:20%">Ejemplo</th>
+                </tr>
+                <tr>
+                <td>&amp;&amp;&nbsp;</td>
+                <td>Lógico "y""</td>
+                <td>Devuelve verdadero si ambas afirmaciones son verdaderas</td>
+                <td>x &lt; 5 &amp;&amp;&nbsp; x &lt; 10</td>
+                </tr>
+                <tr>
+                <td>||&nbsp;</td>
+                <td>Lógica "o"</td>
+                <td>Devuelve verdadero si una de las afirmaciones es verdadera</td>
+                <td>x &lt; 5 || x &lt; 4</td>
+                </tr>
+                <tr>
+                <td>!</td>
+                <td>Lógico "no"</td>
+                <td>Invierta el resultado, devuelve falso si el resultado es verdadero</td>
+                <td>!(x &lt; 5 &amp;&amp; x &lt; 10)</td>
+                </tr>
+                </table>
+                <p>
+                    Aprenderá más sobre los operadores lógicos y de comparación en los capítulos Booleanos y If ... Else .
+                </p>
+        </section>
+
+        <hr>
     </div>
 
 
