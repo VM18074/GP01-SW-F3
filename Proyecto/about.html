@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Programación en C#</title>
+</head>
+<body>
+    <span class="ir-arriba icon-arrow-up2"></span>
+    <header>
+        <div id="navigation">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pPasos.html">Primeros pasos</a></li>
+                <li><a href="intermedio.html">Intermedio</a></li>
+                <li><a href="">Avanzado</a></li>
+                <li><a href="about.html">Misión y Visión</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="firstcontainer">
+        <section>
+            <h1>Sobre el proyecto</h1>
+            <p>Se pretende Implementar sitio web de contenido propio para dar a conocer el lenguaje de programación (historia, origen, área de aplicación del lenguaje de programación: C#, características, etc. enfocado a enseñar de manera efectiva pero en líneas generales el uso de las estructuras de control, estructuras de datos básicas, de la programación), las intenciones del sitio web será enseñar de una manera breve las características del lenguaje de programación a base de ejemplos, con la cual se tiene la idea de crear un cuadro de texto con la sintaxis con la opcion de copiar fácilmente las lineas de codigo, para que el usuario pueda tener una interacción continua con la web, nos expandimos a las herramientas con ejemplos online(compiladores online), desktop y si hay móvil.</p>
+        </section>
+    </div><br>
+    <div id="secondcontainer">
+        <h1 align="center">Sobre nosotros</h1>
+        <section>
+            <h2>Misión</h2>
+            <p>
+                Contribuir al desarrollo tecnológico e informático del país a través de experiencias educativas, eficientes y efectivas para la formación de futuros programadores.
+            </p><br>
+            <h2>Visión</h2>
+            <p>
+                Desbloquear el potencial de cada persona, para que descubran y desarrollen el programador que llevan dentro.
+            </p> <br>
+            <h2>El equipo de trabajo</h2>
+            <p>
+                Conformado por estudiantes de la Universidad de El Salvador, que cursan la materia Técnicas de Programación en Internet, impartida por el Ing. Balmore Ortíz.
+                <ul>
+                    <li>CD17008 - Chicas Duarte, Herbert Daniel</li>
+                    <li>FB17006 - Flores Barahona, Leonardo Antonio</li>
+                    <li>FM16025 - Flores Mariona, José Ramón</li>
+                    <li>MM18226 - Morales Mozo, Ariel Ernesto</li>
+                    <li>PC12016 - Peña Córdova, Miguel Enrique</li>
+                    <li>PC15007 - Peraza Cruz, Lance Albeiro</li>
+                    <li>VM18074 - Velásquez Martínez, Javier Rafael</li>
+                </ul>
+            </p>
+        </section>
+    </div>
+    <footer>
+        TPI115-2021 FIA-UES Grupo 01
+    </footer>
+
+    <script type='text/javascript'>
+        /*Boton arriba*/
+        $(document).ready(function(){
+
+        $('.ir-arriba').click(function(){
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function(){
+            if( $(this).scrollTop() > 0 ){
+                $('.ir-arriba').slideDown(300);
+            } else {
+                $('.ir-arriba').slideUp(300);
+            }
+        });
+
+        });
+    </script>
+</body>
+</html>
