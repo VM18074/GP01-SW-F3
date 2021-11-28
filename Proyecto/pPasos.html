@@ -2,12 +2,14 @@
 <html lang="es">
 <head>
     <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programación en C#</title>
 </head>
 <body>
+    <span class="ir-arriba icon-arrow-up2"></span>
     <header>
         <div id="navigation">
             <ul>
@@ -32,14 +34,14 @@
         <section>
             <h2>Agenda: </h2>
             <ul class="inicioN">
-                <li class="tema"><a href="">Uso de IDE para pruebas y ejercicios</a></li>
-                <li class="tema"><a href="">Sintaxis </a></li>
-                <li class="tema"><a href="">Comentarios</a></li>
-                <li class="tema"><a href="">Convenciones de codificación</a></li>
-                <li class="tema"><a href="">Variables</a></li>
-                <li class="tema"><a href="">Tipos de datos</a></li>
-                <li class="tema"><a href="">Casting en C#</a></li>
-                <li class="tema"><a href="">Operadores</a></li>
+                <li class="tema"><a href="#tema1">Uso de IDE para pruebas y ejercicios</a></li>
+                <li class="tema"><a href="#tema2">Sintaxis </a></li>
+                <li class="tema"><a href="#tema3">Comentarios</a></li>
+                <li class="tema"><a href="#tema4">Convenciones de codificación</a></li>
+                <li class="tema"><a href="#tema5">Variables</a></li>
+                <li class="tema"><a href="#tema6">Tipos de datos</a></li>
+                <li class="tema"><a href="#tema7">Casting en C#</a></li>
+                <li class="tema"><a href="#tema8">Operadores</a></li>
                 
             </ul>            
         </section>
@@ -47,9 +49,11 @@
         <hr>
         <br>
     </div>
-    <div id="thirdcontainer">
+    
+    <div id="thirdcontainer" >
         <section>
-            <h2>Uso de IDE para pruebas y ejercicios</h2>
+            <a name="tema1"></a>
+            <h1>Uso de IDE para pruebas y ejercicios</h1>
             
             <p>
                 <img src="images/visualC.png" alt="Imagen visual studio">
@@ -73,20 +77,357 @@
     <div id="secondcontainer">
         
         <section>
-            <h2>Sintaxis </h2>
+            <a name="tema2"></a>
+            <h1>Sintaxis </h1>
             <p>
 
             </p>           
         </section>
         <section>
+            <h3>Ejemplo 1</h3>
             <!--aplicando interfaz de codigo. -->
             <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
-             
+                using System;
+
+                namespace HelloWorld
+                {
+                  class Program
+                  {
+                    static void Main(string[] args)
+                    {
+                      Console.WriteLine("Hello World!");    
+                    }
+                  }
+                }
+                
+                /*Resultado:
+                Hello World!*/
+                   
+            </code></pre>
+            
+        </section>
+        <section>
+            <h4>Explicación sintaxis Ejemplo 1</h4>
+            <p>Línea 1: using System significa que podemos usar clases del Systemespacio de nombres.
+                <br>
+                Línea 2: una línea en blanco. C # ignora los espacios en blanco. Sin embargo, varias líneas hacen que el código sea más legible.
+                <br>
+                Línea 3: namespace se usa para organizar su código y es un contenedor para clases y otros espacios de nombres.
+                <br>
+                Línea 4: Las llaves {}marcan el comienzo y el final de un bloque de código.
+                <br>
+                Línea 5: class es un contenedor de datos y métodos, que aporta funcionalidad a su programa. Cada línea de código que se ejecuta en C # debe estar dentro de una clase. En nuestro ejemplo, llamamos a la clase Program.
+                <br>
+                No se preocupe si usted no entiende cómo using System, namespacey classobras. Piense en ello como algo que (casi) siempre aparece en su programa, y ​​que aprenderá más sobre ellos en un capítulo posterior.
+                <br>
+                Línea 7: Otra cosa que siempre aparece en un programa C #, es el Mainmétodo. Se {}ejecutará cualquier código dentro de sus llaves . No es necesario que comprenda las palabras clave antes y después de Main. Los conocerá poco a poco mientras lee este tutorial.
+                <br>
+                Línea 9: Console es una clase del Systemespacio de nombres, que tiene un WriteLine()método que se utiliza para generar / imprimir texto. En nuestro ejemplo, generará "¡Hola mundo!".
+                <br>
+                Si omite la using Systemlínea, tendrá que escribir System.Console.WriteLine()en el texto de impresión / salida.
+                <br>
+                Nota: Cada instrucción de C # termina con un punto y coma ;.
+                <br>
+                Nota: C # distingue entre mayúsculas y minúsculas: "MyClass" y "myclass" tienen un significado diferente.
+                <br>
+                Nota: A diferencia de Java , el nombre del archivo C # no tiene que coincidir con el nombre de la clase, pero a menudo lo hacen (para una mejor organización). Al guardar el archivo, guárdelo con un nombre adecuado y agregue ".cs" al final del nombre del archivo.</p>
+        </section>
+        <section>
+            <h3>Ejemplo 2</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                Console.WriteLine("Hello World!");  
+                Console.WriteLine("I will print on a new line.");
+
+                Console.Write("Hello World! ");
+                Console.Write("I will print on the same line."); 
+
+                /*Resultado:
+                Hello World!
+                I will print on a new line.
+                Hello World! I will print on the same line.*/
+                   
+            </code></pre>
+            
+        </section>
+        <section>
+            <h4>Explicación sintaxis Ejemplo 2</h4>
+            <p>
+                El método más común para generar algo en C # es WriteLine(), pero también puede usar Write().
+                <br>
+                La diferencia es que WriteLine()imprime la salida en una nueva línea cada vez, mientras que Write()imprime en la misma línea (tenga en cuenta que debe recordar agregar espacios cuando sea necesario, para una mejor legibilidad)
+            </p>
+        </section>
+
+        <hr>
+    </div>
+    <div id="thirdcontainer" >
+        <section>
+            <a name="tema3"></a>
+            <h1>Comentarios</h1>
+            <p>
+                Los comentarios se pueden utilizar para explicar el código C # y hacerlo más legible. También se puede utilizar para evitar la ejecución al probar código alternativo.
+            </p>
+        </section>
+        <section>
+            <h3>Comentarios de una sola línea</h3>
+            <p>
+                Los comentarios de una sola línea comienzan con dos barras diagonales ( //).
+                <br>
+            // C # ignora cualquier texto entre y el final de la línea (no se ejecutará).
+                <br>
+            Este ejemplo utiliza un comentario de una sola línea antes de una línea de código:
+            </p>
+        </section>
+        <section>
+            
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                // This is a comment
+                Console.WriteLine("Hello World!");
+
+                Console.WriteLine("Hello World2!");  // This is a comment
+                   
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>Comentarios de varias líneas de C #</h3>
+            <p>
+                Los comentarios de varias líneas comienzan con /*y terminan con */.
+                <br>
+                C # ignorará cualquier texto entre /*y */.
+                <br>
+                Este ejemplo utiliza un comentario de varias líneas (un bloque de comentarios) para explicar el código:
+            </p>
+        </section>
+        <section>
+            
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                /* The code below will print the words Hello World
+                to the screen, and it is amazing */
+                Console.WriteLine("Hello World!"); 
                    
             </code></pre>
             
         </section>
         <hr>
+    </div>
+    <div id="secondcontainer" >
+        <section>
+            <a name="tema4"></a>
+            <h1>Convenciones de codificación</h1>
+            <p>
+                NORMAS GENERALES: Toda la codificación realizada es decir creación de formularios, clases, propiedades, métodos, etc, es en inglés.
+                <br><br>
+                CLASES:Nombramiento en singular
+                <br><br>
+                MÉTODOS: Debe iniciar con un verbo (acción).
+                <br><br>
+                PROPIEDADES: Nombramiento en singular, a menos que sea una colección.
+                <br><br>
+                INSTANCIAS A CLASES: En lo posible usar el patrón de singleton, y debe quedar como una propiedad de la clase desde la cual está siendo invocada.
+            </p>
+        </section>
+        <section>
+            <h3>Utilice Pascal Case para nombres de clases y métodos</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                public class ClientActivity
+                {
+                    public void ClearStatistics()
+                    {
+                        // ..
+                    }
+                
+                    public void CalculateStatistics()
+                    {
+                        // ..
+                    }
+                }
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>Utilice camelCasing para argumentos de método y variables locales</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                public class ClientActivity
+                {
+                    public void Add(LogEvent logEvent)
+                    {
+                        int itemCount = logEvent.Items.Count;
+                    }
+                }
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>NO utilizar la notación húngara o cualquier otra identificación de tipo en los identificadores</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                // Correct
+                int counter;
+                string name;
+                 
+                // Avoid
+                int iCounter;
+                string strName;
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>NO usar mayúsculas para constantes o variables de sólo lectura</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                // Correct
+                public static const string ShippingType = "DropShip";
+                
+                // Avoid
+                public static const string SHIPPINGTYPE = "DropShip";
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>EVITAR Usar las abreviaturas. Excepciones: abreviaturas comúnmente usadas como nombres, como Id, Xml, Ftp, Uri</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                // Correct
+                UserGroup userGroup;
+                Assignment assignment;
+                
+                // Avoid
+                UserGroup usrGrp;;
+                Assignment empAssignment;;
+                
+                // Exception
+                CustomerId iCounter;
+                XmlDocument xmlDocument;
+                FtpHelper ftpHelper;
+                UriPart uriPart;
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>NO utilizar raya al piso en los identificadores. Excepción: puede usarse variables estáticas privadas.</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                // Correct
+                public DateTime clientAppointment;
+                public TimeSpan timeLeft;
+                
+                // Avoid
+                public DateTime client_Appointment;
+                public TimeSpan time_Left;
+                
+                // Exception
+                private DateTime _registrationDate;
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>Utilizar nombres de tipo predefinidos en lugar de nombres de tipo de sistema como Int16, Single, UInt64, etc.</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                // Correct
+                string firstName;
+                int lastIndex;
+                bool isSaved;
+                
+                // Avoid
+                String firstName;
+                Int32 lastIndex;
+                Boolean isSaved;
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>Utilizar sustantivos para nombrar una clase.</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                public class Employee
+                {
+                
+                }
+                
+                public class BusinessLocation
+                {
+                
+                }
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>Utilizar en las interfaces el prefijo con la letra I. Los nombres de interfaz son sustantivos (frases) o adjetivos.
+            </h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                public interface IShape
+                {
+                
+                }
+                
+                public interface IShapeCollection
+                {
+                
+                }
+                
+                public interface IGroupable
+                {
+                
+                }
+            </code></pre>
+            
+        </section>
+        <section>
+            <h3>Declarar todas las variables en la parte superior de la clase. En el siguiente orden, contantes, estáticas y propiedades.</h3>
+            <!--aplicando interfaz de codigo. -->
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                // Correct
+                public class Account
+                {
+                    public static string  BankName;
+                    public static decimal  Reserves;
+                
+                    public string Number { get; set; }
+                    protected DateTime DateOpened { get; set; }
+                    private DateTime DateClosed { get; set; }
+                    public decimal Balance { get; set; }
+                }
+                
+                // Constructor
+                public Account()
+                {
+                    // ...
+                }
+            </code></pre>
+            
+        </section>
+
+        <hr>
+    </div>
+
+    <div id="thirdcontainer" >
+        <section>
+            <a name="tema5"></a>
+            <h1>Variables</h1>
+            <p>
+                Las variables son contenedores para almacenar valores de datos.
+                <br>
+                En C #, existen diferentes tipos de variables (definidas con diferentes palabras clave), por ejemplo:
+                <br>
+                int - almacena enteros (números enteros), sin decimales, como 123 o -123
+                <br>
+                double - almacena números de punto flotante, con decimales, como 19,99 o -19,99
+                <br>
+                char- almacena caracteres individuales, como 'a' o 'B'. Los valores de caracteres están rodeados por comillas simples
+                <br>
+                string- almacena texto, como "Hola mundo". Los valores de cadena están rodeados por comillas dobles
+                <br>
+                bool - almacena valores con dos estados: verdadero o falso
+            </p>
+        </section>
     </div>
     <footer>
         TPI115-2021 FIA-UES Grupo 01
@@ -102,6 +443,24 @@
             document.execCommand("copy");
             document.body.removeChild(aux);
                 }
+    /*Boton arriba*/
+        $(document).ready(function(){
+
+        $('.ir-arriba').click(function(){
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function(){
+            if( $(this).scrollTop() > 0 ){
+                $('.ir-arriba').slideDown(300);
+            } else {
+                $('.ir-arriba').slideUp(300);
+            }
+        });
+
+        });
     </script>
     <!--fin del script-->        
 </body>

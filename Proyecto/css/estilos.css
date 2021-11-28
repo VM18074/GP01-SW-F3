@@ -219,3 +219,16 @@ pre.code-csharp4 code {
     background-color:#434343;
 }
 
+/*CSS flecha ir arriba */
+.ir-arriba{
+	
+	padding:10px;
+	background:#024959;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+
