@@ -65,12 +65,25 @@ body{
      margin-right: 75px;
  }
 
- #secondcontainer img{
-     width: 175px;
-     height: 175px;
-     float: left;
-     margin-right: 15px;
- }
+ #secondcontainer #img-intermedio{
+    width: 375px;
+    height: 375px;
+    float: right;
+    margin-right: 15px;
+}
+#secondcontainer img{
+    width: 175px;
+    height: 175px;
+    float: left;
+    margin-right: 15px;
+}
+#thirdcontainer #img-intermedio{
+    width: 375px;
+    height: 375px;
+    float: left;
+    margin-right: 15px;
+}
+
 
 #thirdcontainer img{
     width: 175px;
@@ -78,6 +91,8 @@ body{
     float: right;
     margin-left: 15px;
 }
+
+
  footer{
      background-color: rgb(34, 96, 182);
      position: fixed;

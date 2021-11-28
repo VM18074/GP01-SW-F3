@@ -18,7 +18,6 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="pPasos.html">Primeros pasos</a></li>
-                <li><a href="intermedio.html">Intermedio</a></li>
                 <li><a href="">Avanzado</a></li>
                 <li><a href="about.html">Misión y Visión</a></li>
             </ul>
@@ -47,7 +46,7 @@
                 <li class="tema"><a href="#tema5">Estructura de repeticion while</a></li>
                 <li class="tema"><a href="#tema6">Estructura de repeticion Dowhile</a></li>
                 <li class="tema"><a href="#tema7">Estructura de repeticion for</a></li>
-                <li class="tema"><a href="#tema8">Estructura de en C#</a></li>
+                <li class="tema"><a href="#tema8">Estructura de switch C#</a></li>
             </ul>
         </section>
         <br>
@@ -142,20 +141,23 @@
     </div>
     <!--XXXXXXXXXXXXXXXXXXXXXX TEMA---------3---------XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
     <div id="thirdcontainer">
+        <img id="img-intermedio" src="images/ifelse.gif" alt="Imagen ifelse">
         <section>
             <a name="tema3"></a>
-            <h2>Sentencia Condicional if-else</h2>
-            <img class="img-intermedio" src="images/ifelse.gif" alt="Imagen ifelse">
-            <br>         
+            <h2>Sentencia Condicional if-else</h2>            
+            <br>
             <p>
-               
+
                 A la instrucción if se le puede agregar una cláusula else, que permite ejecutar una instrucción o un
                 bloque de instrucciones en el caso de que la condición no se cumpla.
                 <br>
                 <br>
-                En la siguiente imagen definimos la condició, esta como sabemos es de tipo booleano, que significa que solo posee dos resultados,
-                verdadero representadop por el bloque 1, y falso representado por el bloque2, lo que significa que dependiendo del resultado de la condición
-                sera el bloque de código que se va a ejecutar, en este tipo de sentencias es imposible que se ejecuten los dos bloques de código.                            
+                En la siguiente imagen definimos la condició, esta como sabemos es de tipo booleano, que significa que
+                solo posee dos resultados,
+                verdadero representadop por el bloque 1, y falso representado por el bloque2, lo que significa que
+                dependiendo del resultado de la condición
+                sera el bloque de código que se va a ejecutar, en este tipo de sentencias es imposible que se ejecuten
+                los dos bloques de código.
                 <br>
                 <br>
             </p>
@@ -185,15 +187,51 @@
     </div>
     <!--XXXXXXXXXXXXXXXXXXXXXX TEMA-----4--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
     <div id="secondcontainer">
+        <img id="img-intermedio" src="images/elseif.png" alt="Imagen ifelse">
         <section>
             <a name="tema4"></a>
             <h2>Sentencia Condicional if-else if-else</h2>
+            
             <br>
+            <p>
+                También conocido conomo if anidados. O condiciones anidadas.  
+                Dentro del bloque de instrucciones podemos incluir cualquier instrucción. Es muy común en programacion
+                encontrar sentencias if dentro de sentencias if.
+                <br>
+                <br>
+                Lo que se quiere representar es que se puede tener un if dentro de un if o else, a lo que se concluye es que 
+                despues de tener el resultado veradero o falso, dentro del código a ejecuatar se puede colocar otro if, esto en la programación
+                funciona para validar en varios puntos un dato. 
+                <br>
+            </p>
         </section>
         <section>
             <!--aplicando interfaz de codigo. -->
-            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p4')"><label>C#</label><code id="p4">
-             
+            <pre class='code code-csharp1' onclick="copiarAlPortapapeles('p4')"><label>C#</label><code id="p4">
+
+                if (lado1 == lado2 && lado2 == lado3) {
+                    JOptionPane.showMessageDialog(null, "El triángulo es equilátero");
+                } else {
+                    if (lado1 == lado2 ||  lado2 == lado3 || lado1 == lado3) {
+                        JOptionPane.showMessageDialog(null, "El triángulo es isósceles");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "El triángulo es escaleno");
+                    }
+                }
+
+                //También se puede representar de la siguiente manera
+                if (lado1 == lado2 && lado2 == lado3)
+                {
+                    JOptionPane.showMessageDialog(null, "El triángulo es equilátero");
+                }
+                else if (lado1 == lado2 ||  lado2 == lado3 || lado1 == lado3)
+                {
+                    JOptionPane.showMessageDialog(null, "El triángulo es isósceles");
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "El triángulo es escaleno");
+                }
                    
             </code></pre>
 
@@ -271,7 +309,7 @@
     <div id="secondcontainer">
         <section>
             <a name="tema8"></a>
-            <h2>Estructura de en C#</h2>
+            <h2>Estructura de switch en C#</h2>
             <br>
         </section>
         <section>
