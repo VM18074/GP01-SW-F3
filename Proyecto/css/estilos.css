@@ -196,6 +196,20 @@ pre.code-csharp4 code {
     width: auto;
     position: absolute
 }
+
+.icono{
+   max-width: 7.5em;
+   max-height:3em;
+   position:static;
+ }
+ .compiladores
+ {
+    
+    width: 450px;  
+    margin: 0 auto;
+    
+ }
+
 .video:visited{
     color: black;  
     font-family: arial; 
