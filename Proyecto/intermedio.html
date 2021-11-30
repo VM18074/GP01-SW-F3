@@ -618,7 +618,142 @@
         </span>
         </div>
         </section>
+        <section>
+            <p>
+                <a name="tema9.5"></a>
+                <h2>Ejercicio 5</h2>
+                Realiza un programa con la instrunccion while, que muestre los primeros 100 números enteros iniciando desde el 1.
+            <div class="ejemplo">
+                <p class="showEj" onclick="mostrar('ej5');return false">Click para mostrar/ocultar Ejercicio Resulto</p>
+                <p class="showTema" ><a href="#tema5">Click para ir a tema sobre ejercicio</a></p>
+                <br>
+                <a href="https://www.youtube.com/watch?v=7ioQM0RZJ7I" class="video" target="_blank"><span class="textovideo">Video refuerzo</span></a>
+                <span id="ej5" class="oculto">
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p14')"><label>C#</label><code id="p14">
+                int contador = 1;
+        while (contador <= 100)
+        {
+            Console.WriteLine(contador);
+            contador += 1;
+        }
+            </code></pre>
+        </span>
+        </div>
+        </section>
+        <section>
+            <p>
+                <a name="tema9.6"></a>
+                <h2>Ejercicio 6</h2>
+               Ejercicio con más dificultad.
+            Realizar un programa que pida una serie de números y cuando oprima la tecla '0', termine el programa y represente en pantalla el promedio de la serie de números introducidos, utilizar sentencia do while. 
+            <div class="ejemplo">
+                <p class="showEj" onclick="mostrar('ej6');return false">Click para mostrar/ocultar Ejercicio Resulto</p>
+                <p class="showTema" ><a href="#tema6">Click para ir a tema sobre ejercicio</a></p>
+                <br>
+                <a href="https://www.youtube.com/watch?v=yt05QtdO5Ek" class="video" target="_blank"><span class="textovideo">Video refuerzo</span></a>
+                <span id="ej6" class="oculto">
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p15')"><label>C#</label><code id="p15">
+                int suma, cant, valor, promedio;
+                string linea;
+                suma = 0;
+                cant = 0;
+                do
+                {
+                    Console.Write("Ingrese un nimero (0 para finalizar):");
+                    linea = Console.ReadLine();
+                    valor = int.Parse(linea);
+                    if (valor != 0)
+                    {
+                        suma = suma + valor;
+                        cant++;
+                    }
+                } while (valor != 0);
+                if (cant != 0)
+                {
+                    promedio = suma / cant;
+                    Console.Write("El promedio de los valores ingresados es:");
+                    Console.Write(promedio);
+                }
+                else
+                {
+                    Console.Write("No se ingresaron valores ");
+                }
+                Console.ReadLine();
+            </code></pre>
+        </span>
+        </div>
+        </section>
+        <section>
+            <p>
+                <a name="tema9.7"></a>
+                <h2>Ejercicio 7</h2>
+                Desarrollar un programa que muestre la tabla de multiplicar de un numero ingresado por el teclado del 1 al 12, ocupar sentencia for.
+            <div class="ejemplo">
+                <p class="showEj" onclick="mostrar('ej7');return false">Click para mostrar/ocultar Ejercicio Resulto</p>
+                <p class="showTema" ><a href="#tema7">Click para ir a tema sobre ejercicio</a></p>
+                <br>
+                <a href="https://www.youtube.com/watch?v=BjewFZKBsOo" class="video" target="_blank"><span class="textovideo">Video refuerzo</span></a>
+                <span id="ej7" class="oculto">
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p16')"><label>C#</label><code id="p16">
+                int n;
+            string linea;
+            Console.Write("Ingrese multiplicador: ");
+            linea = Console.ReadLine();
+            n = int.Parse(linea);
+            for(int i=1; i<=12; i++ ) {              
+                    Console.Write(i+" x "+n+" = "+i*n+"\n");               
+            }           
+            </code></pre>
+        </span>
+        </div>
+        </section>
+        <section>
+            <p>
+                <a name="tema9.8"></a>
+                <h2>Ejercicio 8</h2>
+                Solicitar un numero en minisculas al usuario, y por medio de este mostrar en pantalla el digito que le corresponda, ejemplo si el usuario
+                introduce "dos", en la pantalla debera de mostrar "2", solo se permiten los digitos del 0 al 9, ocupe la sentencia switch.      
+            <div class="ejemplo">
+                <p class="showEj" onclick="mostrar('ej8');return false">Click para mostrar/ocultar Ejercicio Resulto</p>
+                <p class="showTema" ><a href="#tema8">Click para ir a tema sobre ejercicio</a></p>
+                <br>
+                <a href="https://www.youtube.com/watch?v=n1jydrJMcWk" class="video" target="_blank"><span class="textovideo">Video refuerzo</span></a>
+                <span id="ej8" class="oculto">
+            <pre class='code code-csharp3' onclick="copiarAlPortapapeles('p17')"><label>C#</label><code id="p17">
+                 
+                Console.Write("Ingrese un número en letra entre cero y nueve:");
+            string nro = Console.ReadLine();
+            switch (nro)
+            {
+				case "cero": Console.Write(0);
+                            break;
+                case "uno": Console.Write(1);
+                            break;
+                case "dos": Console.Write(2);
+                            break;
+                case "tres": Console.Write(3);
+                            break;
+                case "cuatro": Console.Write(4);
+                            break;
+                case "cinco": Console.Write(5);
+                            break;
+			case "seis": Console.Write(6);
+                            break;
+			case "siete": Console.Write(7);
+                            break;
+			case "ocho": Console.Write(8);
+                            break;
+			case "nueve": Console.Write(9);
+                            break;
+                default: Console.Write("Debe ingresar un valor entre cero y nueve");
+                            break;
+            </code></pre>
+        </span>
+        </div>
+        </section>
     </div>
+    <br>
+    <br>
 
 
     <footer>
