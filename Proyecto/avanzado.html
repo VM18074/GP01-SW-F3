@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Programación en C#</title>
+</head>
+<body>
+    <span class="ir-arriba icon-arrow-up2"></span>
+    <header>
+        <div id="navigation">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pPasos.html">Primeros pasos</a></li>
+                <li><a href="intermedio.html">Intermedio</a></li>
+                <li><a href="about.html">Misión y Visión</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="firstcontainer">
+        <section>
+            <h1>Nivel Avanzado</h1>
+            <p>En este nivel conoceremos sobre la aplicación de este lenguaje a la programación orientada a objetos (POO), 
+                veremos los términos básicos, y cómo utilizarlo en C#.
+            </p>
+        </section>
+    </div>
+    <div id="secondcontainer">
+        <h1 align="center">Programación Orientada a Objetos en C#</h1>
+        <section>
+            <h2>Agenda: </h2>
+            <ul class="inicioN">
+                <li class="tema"><a href="#tema0">Terminología</a></li>
+                <li class="tema"><a href="#tema1">POO</a></li>
+                <li class="tema"><a href="#tema2">Clases/Objetos </a></li>
+                <li class="tema"><a href="#tema3">Constructores</a></li>
+                <li class="tema"><a href="#tema4">Polimorfismo</a></li>
+                <li class="tema"><a href="#tema5">Interfaces</a></li>
+                <li class="tema"><a href="#tema6">Excepciones</a></li>
+            </ul>
+        </section>
+    </div>
+    <div id="thirdcontainer">
+        <section>
+            <a name="tema0"></a>
+            <br>
+            <h2>Programacion Orientada a Objetos (POO)</h2>
+            <p>
+                La Programación Orientada a Objetos (POO) es un paradigma de programación, es decir, un modelo o un estilo de programación que nos da unas guías sobre cómo trabajar con él. Se basa en el concepto de clases y objetos. Este tipo de programación se utiliza para estructurar un programa de software en piezas simples y reutilizables de planos de código (clases) para crear instancias individuales de objetos. 
+                <br><br><strong>¿Por qué POO?</strong><br>
+                La Programación Orientada a objetos permite que el código sea reutilizable, organizado y fácil de mantener. Sigue el principio de desarrollo de software utilizado por muchos programadores DRY (Don’t Repeat Yourself), para evitar duplicar el código y crear de esta manera programas eficientes. Además, evita el acceso no deseado a los datos o la exposición de código propietario mediante la encapsulación y la abstracción, de la que hablaremos en detalle más adelante.
+            </p><br>
+        </section>
+    </div>
+    <div id="secondcontainer">
+        <section>
+            <a name="tema1"></a>
+            <h2>POO</h2>
+            <p>
+                La programación por procedimientos se trata de escribir procedimientos o métodos que realizan 
+                operaciones en los datos, mientras que la programación orientada a objetos se trata de crear 
+                objetos que contienen tanto datos como métodos.
+            </p>
+            <br>
+            <p>
+                La programación orientada a objetos tiene varias ventajas sobre la programación procedimental:
+                <br><br>
+                    POO es más rápido y fácil de ejecutar <br>
+                    POO proporciona una estructura clara para los programas <br>
+                    POO ayuda a mantener el código C # SECO "No se repita", y hace que el código sea más fácil
+                        de mantener, modificar y depurar <br>
+                    La programación orientada a objetos permite crear aplicaciones completamente reutilizables 
+                        con menos código y un tiempo de desarrollo más corto. <br>
+                 </p> <br>
+                <h3>¿Qué son las clases y objetos?</h3>
+                <p>Las clases y los objetos son los dos aspectos principales de la programación orientada a objetos.
+                    <br>
+                    Mire la siguiente ilustración para ver la diferencia entre clase y objetos:
+                </p><br>
+                <table>
+                      <col span="2" style="border: skyblue 10px solid">
+                    </colgroup>
+                    <tr>
+                      <th>Clase</th>
+                      <th>Objeto</th>
+                    </tr>
+                    <tr>
+                      <td>Fruta</td>
+                      <td>Manzana</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>Banana</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                      <td>Mango</td>
+                    </tr>
+                  </table><br>
+                <p>
+                    Entonces, una clase es una plantilla para objetos y un objeto es una instancia de una clase.
+                    Cuando se crean los objetos individuales, heredan todas las variables y métodos de la clase.
+                </p><br>
+        </section>
+    </div>
+    <div id="thirdcontainer">
+        <section>
+            <a name="tema2"></a>
+            <h2>Clases/Objetos</h2> 
+            <p>
+                Todo en C # está asociado con clases y objetos, junto con sus atributos y métodos. 
+                Por ejemplo: en la vida real, un automóvil es un objeto. El automóvil tiene atributos,
+                como peso y color, y métodos , como conducir y frenar. <br>
+                <br>Una clase es como un constructor de objetos o un "plano" para crear objetos.
+            </p><br>
+            <h3>Crear una clase en C#</h3>
+            <p>
+                Para crear una clase en C# debe utilizar la palabra reservada class:
+                <br>
+                <h4>Ejemplo: </h4>
+                <pre class='code code-csharp1' onclick="copiarAlPortapapeles('p1')"><label>C#</label><code id="p1">
+                    class Car 
+                    {
+                        string color = "red";
+                    }
+                       
+                </code></pre>
+            </p>
+            <h3>Crear un objeto en C#</h3>
+            <p>
+                Un objeto se crear a partir de una clase. Ya hemos creado la clase Car, por lo que Ahora la podemos utilizar 
+                para crear estos objetos. <br><br>
+                Para crear un objeto de Car, especifique el nombre de la clase, seguido del nombre del objeto y utilice la palabra
+                reservada "new".
+                <h4>Ejemplo:</h4>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p2')">
+                    <code id="p2">
+                        class Car
+                        {
+                            string color = "red";
+
+                            static void Main(string[] args)
+                            {
+                                Car myObj = new Car();
+                                Console.WriteLine(myObj.color);
+                            }
+                        }
+                    </code>
+                </pre>
+            </p>
+            <h3>Objetos múltiples</h3>
+            <p>
+                Puede crearvarios objetos de una clase:
+                <h4>Ejemplo:</h4>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p3')">
+                    <code id="p3">
+                        class Car
+                        {
+                            string color="red";
+
+                            static void Main(string[] args)
+                            {
+                                Car myObj1 = new Car();
+                                Car myObj2 = new Car();
+                                Console.WriteLine(myObj1.color);
+                                Console.WriteLine(myObj2.color);
+                            }
+                        }
+                    </code>
+                </pre>
+            </p>
+            <h3>Usando múltiples clases</h3>
+            <p>
+                También puede crear un objeto d euna clase y acceder a él en otra clase.
+                Esto se usa a menudo para una mejor organización de clases (una clase tiene todos los
+                campos y métodos, mientras que la otra clase contiene el Main() método (código a ejecutar)).
+                <br>prog2.cs
+                <br>prog.cs
+                <h4>prog2.cs</h4>
+                <pre class="code code-csharp1" onclick="copiarAlPortapepeles('p4')">
+                    <code id="p4">
+                        class Car
+                        {
+                            public string color = "red";
+                        }
+                    </code>
+                </pre>
+                <h4>proc.cs</h4>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p5')">
+                    <code id="p5">
+                        class Programación{
+                            static void Main(string[] args)
+                            {
+                                car myObj = new Car();
+                                Console.WriteLine(myObj.color);
+                            }
+                        }
+                    </code>
+                </pre>
+            </p>
+        </section>
+    </div>
+    <div id="secondcontainer">
+        <section>
+            <a name="tema3"></a>
+            <h2>Constructores</h2>
+            <p>
+                Un constructor es un método especial que se utiliza para inicializar objetos.
+                La ventaja de un constructor es que se llama cuando se crea un objeto de una clase.
+                Se puede utilizar para establecer valores iniciales para los campos.
+                <h3>Ejemplo:</h3>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p6')">
+                    <code id="p6">
+                        //Crear la clase
+                        class Car
+                        {
+                            public string model; //Crear el campo
+
+                            //Crear una clase constructora para la clase
+                            public car(){
+                                model = "Mustang"; //inicializando un valor para modelo
+                            }
+
+                            static void Main(string[] args){
+                                Card ford = new Car(); //Crea un objeto de la clase Car
+                                Console.WriteLine(ford.model); //Imprime el valor de model
+                            }
+                        }
+                    </code>
+                </pre>
+            </p>
+            <h3>Parámetros de contructor</h3>
+            <p>
+                Los constructores también pueden tomar parámetros, que se utilizarn para inicializar campos.
+                <br>
+                El siguiente ejemplo agrega un string modelName parámetro al constructutor.
+                Dentro del constructor establecemos model en modelName(model=modelName). Cuando llamamos
+                al constructor, pasamos un parámetro al constructor("Mustang"), que establecerá el valor de model en "Mustang":
+                <h4>Ejemplo:</h4>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p7')">
+                    <code id="p7">
+                        class Car
+                        {
+                            public string model;
+
+                            //Creando una clase constructora con parámetros
+                            public Car(string modelName)
+                            {
+                                model = modelName;
+                            }
+
+                            static void Main(string[] args){
+                                Car ford = new Car('Mustang');
+                                Console.WriteLine(ford.model);
+                            }
+                        }
+                    </code>
+                </pre>
+                Pueden ser tantos parámetros como desee.
+            </p>
+            <h3>Los constructores ahorran tiempo</h3>
+            <p>
+                Al estudiar los códigos anteriores podrá notar que los constructores
+                son muy útilies, ya que ayudan a reducir la cantidad de código.
+            </p>
+        </section>
+    </div>
+    <div id="thirdcontainer">
+        <a name="tema4"></a>
+        <section>
+            <h2>Polimorfismo y métodos primordiales</h2>
+            <p>
+                Polimorfismo significa "muchas formas" y ocurre cuando tenemos muchas clases que están relacionadas entre sí por herencia.
+                <br>
+                La herencia nos permite herededar campos y métodos de otra clase. El polimorfismo usa esos métodos para realizar
+                diferentes tareas. Esto nos permite realizar una sola acción de diferentes formas.
+                <br>
+                Por ejemplo, piense en una clase base llamada Animal que tiene un método llamado animalSound(). Las clases derivadas 
+                de animales pueden ser cerdos, gatos, perros, pájaros, y también tienen su propia implementación de un sonido animal (el cerdo gruñe, el gato maúlla, etc):
+                <h3>Ejemplo:</h3>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p8')">
+                    <code id="p8">
+                        class Animal    //Clase base
+                        {
+                            public void animalSound()
+                            {
+                                Console.WriteLine("The animal makes a sound");
+                            }
+                        }
+
+                        class Pig : Animal      // Clase derivada
+                        {
+                            public void animalSound()
+                            {
+                                Console.WriteLine("The pig says: wee wee");
+                            }
+                        }
+
+                        class Dog : Animal      //Clase derivada
+                        {
+                            public void animalSound()
+                            {
+                                Console.WriteLine("The Dog says: bow wow");
+                            }
+                        }
+                    </code>
+                </pre>
+            </p>
+            <p>
+                Ahora podemos crear Pig y Dog objetos y llamar al animalSound() método en dos:
+                <h3>Ejemplo: </h3>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p9')">
+                    <code id="p9">
+                        class Animal    //Clase base
+                        {
+                            public void animalSound()
+                            {
+                                Console.WriteLine("The animal makes a sound");
+                            }
+                        }
+
+                        class Pig : Animal      //Clase derivada
+                        {
+                            public void animalSound()
+                            {
+                                Console.WriteLine("The pig says: wee wee");
+                            }
+                        }
+
+                        class Dog : Animal      //Clase derivada
+                        {
+                            public void animalSound()
+                            {
+                                Console.WriteLine("The dog says: bow wow");
+                            }
+                        }
+
+                        class Program
+                        {
+                            static void Main(string[] args){
+                                Animal myAnimal = new Animal(); //Crea un objeto de la clase Animal
+                                Animal myPig = new Pig(); //Crea un objeto de la clase Pig
+                                Animal myDog = new Dog(); //Crea un objeto de la clase Dog
+
+                                myAnimal.animalSound();
+                                myPig.animalSound();
+                                myDog.animalSound();
+                            }
+                        }
+                    </code>
+                </pre>
+            </p>
+            <p>
+                La salida será:
+                <br><br>
+                <div style="background-color: black; color: white;">
+                    The animal makes a sound <br>
+                    The animal makes a sound <br>
+                    The animal makes a sound <br>
+                </div>
+            </p>
+            <p>
+                <h3>¿No es el resultado que esperaba?</h3>
+                El resultado del ejemplo anterior probablemente no fue el esperado.
+                Esto se debe a que el método de la clase base anula el método de la clase derivada,
+                cuando comparten el mismo nombre.
+                <br>
+                Sin embargo, C# proporciona una opción para anular el método de la clase base,
+                agregando la palabra reservadoa virtual al método dentro de la clase base y usando
+                la palabra reservada override para cada método de la clase derivada
+                <h4>Ejemplo:</h4>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p10')">
+                    <code id="p10">
+                        class Animal  // Clase base
+                        {
+                          public virtual void animalSound() 
+                          {
+                            Console.WriteLine("The animal makes a sound");
+                          }
+                        }
+                        
+                        class Pig : Animal  // Clase derivada
+                        {
+                          public override void animalSound() 
+                          {
+                            Console.WriteLine("The pig says: wee wee");
+                          }
+                        }
+                        
+                        class Dog : Animal  // Clase derivada
+                        {
+                          public override void animalSound() 
+                          {
+                            Console.WriteLine("The dog says: bow wow");
+                          }
+                        }
+                        
+                        class Program 
+                        {
+                          static void Main(string[] args) 
+                          {
+                            Animal myAnimal = new Animal();  // Crea objeto de clase Animal
+                            Animal myPig = new Pig();  // Crea objeto de clase Pig
+                            Animal myDog = new Dog();  // Crea objeto de clase Dog
+                        
+                            myAnimal.animalSound();
+                            myPig.animalSound();
+                            myDog.animalSound();
+                          }
+                        }
+                    </code>
+                </pre>
+            </p>
+            <p>
+                La salida será:
+                <br><br>
+                <div style="background-color: black; color: white;">
+                    The animal makes a sound <br>
+                    The pig says: wee wee <br>
+                    The dog says: bow wow <br>
+                </div>
+            </p>
+        </section>
+    </div>
+    <div id="secondcontainer">
+        <a name="tema5"></a>
+        <section>
+            <h2>Interfaces</h2>
+            <p>
+                Una forma de lograr abstracción en C# es con interfaces.
+                <br>
+                Una interfaz es una clase abstracta que solo puede contener propiedades y métodos abstractos (Cuerpos vacíos)
+            </p>
+            <h3>Ejemplo:</h3>
+            <p>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p11')">
+                    <code id="p11">
+                        // Interfaz
+                        interface Animal 
+                        {
+                            void animalSound(); // Metodo de interfaz (No tiene cuerpo)
+                            void run(); //Método de interfaz  (No tiene cuerpo)
+                        }
+                    </code>
+                </pre>
+            </p>
+            <p>
+                Se considera una buena práctica comenzar con la letra "I" al inicio de una interfaz, ya que le facilita
+                a ustes y a los demás recordar que es una interfaz y no una clase.
+                <br>
+                De forma predeterminada, los miembros de una interfaz son abstract y public.
+                <br>
+                Nota: las interfaces pueden contener propiedades y métodos, pero no campos.
+                <br><br><br>
+                Para acceder a los métodos de la interfaz, la interfaz debe ser "implementada" (algo así como heredada) por otra clase.
+                Para implementar una interfaz, use el simbolo ":" (igual que en la herencia). El cuerpo del método de interfaz 
+                lo proporciona la clase "implementar". Tenga en cuenta que no tiene que utilizar override al implementar una interfaz.
+            </p>
+            <h4>Ejemplo: </h4>
+            <p>
+                <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p12')">
+                    <code id="p12">
+                        // Interfaz
+                        interface IAnimal 
+                        {
+                            void animalSound(); //Método de interfaz
+                        }
+
+                        // Pig "implementa" la interfaz IAnimal 
+                        class Pig : IAnimal 
+                        {
+                            public void animalSound() 
+                            {
+                                // El cuerpo de animalSound() se define aquí
+                                Console.WriteLine("The pig says: wee wee");
+                            }
+                        }
+
+                        class Program 
+                        {
+                            static void Main(string[] args) 
+                            {
+                                Pig myPig = new Pig();  // Crea un objeto de la clase Pig
+                                myPig.animalSound();
+                            }
+                        }
+                    </code>
+                </pre>
+            </p>
+            <h3>Notas sobre las interfaces: </h3>
+            <p>
+                Al igual que las clases abstractas , las interfaces no se pueden utilizar para crear objetos (en el ejemplo anterior, no es posible crear un objeto "IAnimal" en la clase Program) <br>
+                Los métodos de interfaz no tienen cuerpo: el cuerpo lo proporciona la clase "implementar" <br>
+                Al implementar una interfaz, debe anular todos sus métodos <br>
+                Las interfaces pueden contener propiedades y métodos, pero no campos / variables <br>
+                Los miembros de la interfaz son predeterminados abstracty public <br>
+                Una interfaz no puede contener un constructor (ya que no se puede usar para crear objetos) <br>
+            </p>
+            <h3>¿Por qué y cuándo utilizar interfaces?</h3>
+            <p>
+                1) Para lograr seguridad, oculte ciertos detalles y muestre solo los detalles importantes de un objeto (interfaz).
+                <br>
+                2) C # no admite la "herencia múltiple" (una clase solo puede heredar de una clase base). Sin embargo, se puede lograr con interfaces, porque la clase puede implementar múltiples interfaces. Nota: Para implementar múltiples interfaces, sepárelas con una coma (vea el ejemplo a continuación).
+            </p>
+            <h3>Ejemplo: </h3>
+            <pre class="code code-csharp1" onclick="copiarAlPortapapeles('p13')">
+                <code id="p13">
+                    interface IFirstInterface 
+                    {
+                        void myMethod(); // Método de interfaz
+                    }
+
+                    interface ISecondInterface 
+                    {
+                        void myOtherMethod(); // Método de interfaz
+                    }
+
+                    // Implementación de múltiples interfaces
+                    class DemoClass : IFirstInterface, ISecondInterface 
+                    {
+                        public void myMethod() 
+                        {
+                            Console.WriteLine("Some text..");
+                        }
+                        public void myOtherMethod() 
+                        {
+                            Console.WriteLine("Some other text...");
+                        }
+                    }
+
+                    class Program 
+                    {
+                        static void Main(string[] args)
+                        {
+                            DemoClass myObj = new DemoClass();
+                            myObj.myMethod();
+                            myObj.myOtherMethod();
+                        }
+                    }
+                </code>
+            </pre>
+        </section>
+    </div>
+    <footer>
+        TPI115-2021 FIA-UES Grupo 01
+    </footer>
+    <script type='text/javascript'>
+        function copiarAlPortapapeles(id_elemento) {
+             var aux = document.createElement("input");
+            aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+                }
+    /*Boton arriba*/
+        $(document).ready(function(){
+
+        $('.ir-arriba').click(function(){
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function(){
+            if( $(this).scrollTop() > 0 ){
+                $('.ir-arriba').slideDown(300);
+            } else {
+                $('.ir-arriba').slideUp(300);
+            }
+        });
+
+        });
+
+        /*Para ocultar soluciones de ejercicios*/
+        function mostrar(id){
+            obj=document.getElementById(id);
+            obj.style.visibility=(obj.style.visibility=='hidden')?'visible':'hidden';
+        }
+    </script>
+    <!--fin del script-->  
+</body>
+</html>
