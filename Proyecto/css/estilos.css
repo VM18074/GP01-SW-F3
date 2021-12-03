@@ -3,6 +3,17 @@
     padding: 0;
 }
 
+#vermasss{
+    width: 80%;
+    margin: auto;
+
+    }
+    #tit{
+        text-align: center;
+        background: cornflowerblue;
+    
+    }
+
 header{
     background-color: rgb(34, 96, 182);
     width: auto;
@@ -14,6 +25,7 @@ header{
 #navigation ul{
     list-style-type: none;
     text-align: right;
+    
 }
 
 #navigation li{
