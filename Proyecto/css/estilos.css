@@ -6,13 +6,14 @@
 #vermasss{
     width: 80%;
     margin: auto;
+    font-family: 'Times New Roman', Times, serif;
 
     }
     #tit{
         text-align: center;
         background: cornflowerblue;
-    
     }
+    
 
 header{
     background-color: rgb(34, 96, 182);
@@ -25,6 +26,16 @@ header{
 #navigation ul{
     list-style-type: none;
     text-align: right;
+   
+    
+}
+.dibujo{
+    width: 40%;
+    height: 40%;
+    margin:auto ;
+    display: block;
+    padding-bottom: 4em;
+    padding-top: 2em;
     
 }
 
@@ -35,7 +46,7 @@ header{
 }
 
 #navigation a{
-    color: #FFF;
+    color: rgb(250, 246, 246);
 }
 
 body{
@@ -45,7 +56,7 @@ body{
 
 
 #firstcontainer section{
-    background-color: rgb(34, 96, 182);
+    background-color: rgb(34, 111, 182);
     border: rgb(35,96,182) 1px solid;
     padding-top: 0;
     margin: 0;
